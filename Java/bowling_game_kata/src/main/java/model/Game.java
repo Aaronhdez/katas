@@ -33,6 +33,9 @@ public class Game {
     }
 
     private void managePoints(int pinsKnockedDown) {
+        if(currentPlayer.getBonusRolls() > 0) {
+            currentPlayer.addBonus(pinsKnockedDown);
+        }
         if(pinsKnockedDown == 10){
             currentPlayer.setBonusRolls(2);
             increaseRollsPlayed();
