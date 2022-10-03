@@ -31,11 +31,19 @@ public class LaneTest {
         lane.roll(1);
         assertEquals(9, lane.getPinsStanding());
     }
+
     @Test
     public void pins_taken_down_are_never_less_than_0(){
         lane.roll(10);
         lane.roll(1);
         assertFalse(lane.getPinsStanding() < 0);
+    }
+
+    @Test
+    public void pins_taken_down_are_never_negative(){
+        lane.roll(-10);
+        lane.roll(1);
+        assertEquals(9, lane.getPinsStanding());
     }
 
 }
