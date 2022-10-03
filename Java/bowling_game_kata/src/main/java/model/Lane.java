@@ -12,7 +12,7 @@ public class Lane {
         return currentPinsStanding;
     }
 
-    public void loadARound() {
+    public void reloadLane() {
         this.currentPinsStanding = 10;
     }
 
