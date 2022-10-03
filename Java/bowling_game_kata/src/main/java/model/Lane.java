@@ -16,10 +16,10 @@ public class Lane {
         this.currentPinsStanding = 10;
     }
 
-    public void roll(int pinsTakenDown) {
-        if (pinsTakenDown > currentPinsStanding || pinsTakenDown < 0) {
+    public void roll(int pinsKnockedDown) {
+        if (pinsKnockedDown > currentPinsStanding || pinsKnockedDown < 0) {
             return;
         }
-        currentPinsStanding -= pinsTakenDown;
+        currentPinsStanding -= pinsKnockedDown;
     }
 }
