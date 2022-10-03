@@ -35,4 +35,13 @@ public class GameTest {
         assertEquals(game.score(), 2);
     }
 
+    @Test
+    public void frame_counter_should_be_increased_each_two_rolls(){
+        Game game = new Game();
+        game.roll(2);
+        assertEquals(game.getCurrentFrame(), 1);
+        game.roll(2);
+        assertEquals(game.getCurrentFrame(), 2);
+    }
+
 }
