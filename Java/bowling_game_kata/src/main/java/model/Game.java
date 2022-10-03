@@ -27,18 +27,26 @@ public class Game {
     public void roll(int pinsKnockedDown){
         currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
-        managePoints(pinsKnockedDown);
         increaseRollsPlayed();
+        managePoints(pinsKnockedDown);
+        manageBonuses(pinsKnockedDown);
         updateFrameNumber();
+    }
+
+    private void manageBonuses(int pinsKnockedDown) {
+        if(isAStrike(pinsKnockedDown)){
+            currentPlayer.setBonusRolls(2);
+            increaseRollsPlayed();
+        }
+        /*if(isASpare()){
+            currentPlayer.setBonusRolls(1);
+            increaseRollsPlayed();
+        }*/
     }
 
     private void managePoints(int pinsKnockedDown) {
         if(currentPlayer.getBonusRolls() > 0) {
             currentPlayer.addBonus(pinsKnockedDown);
-        }
-        if(pinsKnockedDown == 10){
-            currentPlayer.setBonusRolls(2);
-            increaseRollsPlayed();
         }
     }
 
@@ -56,4 +64,13 @@ public class Game {
     public int score(){
         return this.currentPlayer.getScore();
     }
+
+    private boolean isAStrike(int pinsKnockedDown) {
+        return pinsKnockedDown == 10 && rollsPlayed % 2 == 1;
+    }
+
+    /*private boolean isASpare() {
+        return currentLane.getPinsStanding() == 0
+                && rollsPlayed % 2 == 0;
+    }*/
 }
