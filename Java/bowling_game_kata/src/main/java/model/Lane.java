@@ -15,4 +15,8 @@ public class Lane {
     public void loadARound() {
         this.currentPinsStanding = 10;
     }
+
+    public void roll(int pinsTakenDown) {
+        this.currentPinsStanding = this.currentPinsStanding-pinsTakenDown;
+    }
 }

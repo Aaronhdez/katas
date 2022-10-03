@@ -20,4 +20,13 @@ public class LaneTest {
         assertEquals(10, pinsStandingAfter);
     }
 
+    @Test
+    public void number_of_pins_is_10_if_no_one_is_taken_down_after_first_roll(){
+        lane.loadARound();
+        int pinsStandingAfter = lane.getPinsStanding();
+        lane.roll(0);
+        assertEquals(10, pinsStandingAfter);
+    }
+
+
 }
