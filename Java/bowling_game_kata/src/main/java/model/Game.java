@@ -18,8 +18,8 @@ public class Game {
         return this.currentPlayer;
     }
 
-    public void roll(int pinsKockedDown){
-        this.currentLane.roll(pinsKockedDown);
+    public void roll(int pinsKnockedDown){
+        this.currentLane.roll(pinsKnockedDown);
     }
 
     public int score(){
