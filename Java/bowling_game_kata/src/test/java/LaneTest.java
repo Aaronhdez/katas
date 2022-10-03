@@ -28,5 +28,13 @@ public class LaneTest {
         assertEquals(10, pinsStandingAfter);
     }
 
+    @Test
+    public void number_of_pins_is_less_than_10_if_any_pin_is_taken_down_after_a_roll(){
+        lane.reloadLane();
+        int pinsStandingAfter = lane.getPinsStanding();
+        lane.roll(1);
+        assertEquals(9, pinsStandingAfter);
+    }
+
 
 }
