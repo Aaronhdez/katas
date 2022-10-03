@@ -9,9 +9,10 @@ public class Lane {
     }
 
     public int getPinsStanding() {
-        return 0;
+        return currentPinsStanding;
     }
 
     public void loadARound() {
+        this.currentPinsStanding = 10;
     }
 }
