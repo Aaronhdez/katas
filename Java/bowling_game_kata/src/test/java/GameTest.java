@@ -65,4 +65,15 @@ public class GameTest {
         assertEquals(game.score(), 18);
     }
 
+    @Test
+    public void player_should_receive_bonuses_if_a_spare_is_done_on_two_rolls(){
+        game.roll(9);
+        game.roll(1);
+        int scoreBeforeSpare = game.score();
+        game.roll(2);
+        game.roll(2);
+        assertEquals(scoreBeforeSpare, 10);
+        assertEquals(game.score(), 16);
+    }
+
 }
