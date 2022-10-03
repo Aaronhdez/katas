@@ -29,6 +29,7 @@ public class Game {
         currentPlayer.addScore(pinsKnockedDown);
         if(pinsKnockedDown == 10){
             getCurrentPlayer().setStrike(true);
+            rollsPlayed += 1;
         }
         rollsPlayed += 1;
         updateFrameNumber();
