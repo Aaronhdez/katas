@@ -27,6 +27,9 @@ public class Game {
     public void roll(int pinsKnockedDown){
         this.currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
+        if(pinsKnockedDown == 10){
+            getCurrentPlayer().setStrike(true);
+        }
         rollsPlayed += 1;
         updateFrameNumber();
     }
