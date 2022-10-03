@@ -1,7 +1,17 @@
 package model;
 
 public class Player {
+    private int score;
+
+    public Player() {
+        this.score = 0;
+    }
+
     public int getScore() {
-        return 0;
+        return score;
+    }
+
+    public void addScore(int pinsKnockedDown) {
+        this.score += pinsKnockedDown;
     }
 }

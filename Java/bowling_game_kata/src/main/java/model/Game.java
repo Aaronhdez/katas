@@ -20,6 +20,7 @@ public class Game {
 
     public void roll(int pinsKnockedDown){
         this.currentLane.roll(pinsKnockedDown);
+        currentPlayer.addScore(pinsKnockedDown);
     }
 
     public int score(){
