@@ -4,6 +4,7 @@ import model.Player;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 public class GameTest {
@@ -24,6 +25,14 @@ public class GameTest {
         Game game = new Game();
         Player currentPlayer = game.getCurrentPlayer();
         assertFalse(currentPlayer == null);
+    }
+
+    @Test
+    public void game_sets_score_to_player_each_time_a_ball_is_rolled(){
+        Game game = new Game();
+        Player currentPlayer = game.getCurrentPlayer();
+        game.roll(2);
+        assertEquals(currentPlayer.getScore(), 2);
     }
 
 }

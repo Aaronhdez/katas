@@ -23,6 +23,6 @@ public class Game {
     }
 
     public int score(){
-        return score;
+        return this.currentPlayer.getScore();
     }
 }
