@@ -4,6 +4,7 @@ public class Game {
     private final Player currentPlayer;
     private final Lane currentLane;
     private int currentFrame;
+    private int rollsPlayed = 0;
 
     public Game() {
         this.currentLane = new Lane();
@@ -20,8 +21,13 @@ public class Game {
     }
 
     public void roll(int pinsKnockedDown){
+        rollsPlayed += 1;
         this.currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
+
+        if(rollsPlayed == 2){
+            currentFrame += 1;
+        }
     }
 
     public int score(){
