@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="bowling_game_kata" />
         <module name="bowling_game_kata_2" />
       </profile>
     </annotationProcessing>
