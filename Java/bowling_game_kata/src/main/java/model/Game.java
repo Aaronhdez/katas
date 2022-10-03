@@ -23,6 +23,8 @@ public class Game {
         currentPlayer.addScore(pinsKnockedDown);
     }
 
+
+
     public int score(){
         return this.currentPlayer.getScore();
     }

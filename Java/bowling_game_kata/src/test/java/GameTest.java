@@ -32,7 +32,7 @@ public class GameTest {
         Game game = new Game();
         Player currentPlayer = game.getCurrentPlayer();
         game.roll(2);
-        assertEquals(currentPlayer.getScore(), 2);
+        assertEquals(game.score(), 2);
     }
 
 }
