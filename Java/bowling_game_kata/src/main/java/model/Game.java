@@ -20,11 +20,14 @@ public class Game {
         return this.currentPlayer;
     }
 
+    public int getCurrentFrame() {
+        return currentFrame;
+    }
+
     public void roll(int pinsKnockedDown){
-        rollsPlayed += 1;
         this.currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
-
+        rollsPlayed += 1;
         updateFrameNumber();
     }
 
@@ -36,9 +39,5 @@ public class Game {
 
     public int score(){
         return this.currentPlayer.getScore();
-    }
-
-    public int getCurrentFrame() {
-        return currentFrame;
     }
 }

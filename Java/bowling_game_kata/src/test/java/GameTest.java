@@ -44,4 +44,11 @@ public class GameTest {
         assertEquals(game.getCurrentFrame(), 2);
     }
 
+    @Test
+    public void player_should_receive_strike_status_if_a_strike_is_done(){
+        Game game = new Game();
+        game.roll(10);
+        assertEquals(game.getCurrentPlayer().getStrike(), true);
+    }
+
 }
