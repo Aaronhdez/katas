@@ -16,24 +16,21 @@ public class LaneTest {
     @Test
     public void number_of_pins_is_10_on_each_round(){
         lane.reloadLane();
-        int pinsStandingAfter = lane.getPinsStanding();
-        assertEquals(10, pinsStandingAfter);
+        assertEquals(10, lane.getPinsStanding());
     }
 
     @Test
     public void number_of_pins_is_10_if_no_one_is_taken_down_after_first_roll(){
         lane.reloadLane();
         lane.roll(0);
-        int pinsStandingAfter = lane.getPinsStanding();
-        assertEquals(10, pinsStandingAfter);
+        assertEquals(10, lane.getPinsStanding());;
     }
 
     @Test
     public void number_of_pins_is_less_than_10_if_any_pin_is_taken_down_after_a_roll(){
         lane.reloadLane();
         lane.roll(1);
-        int pinsStandingAfter = lane.getPinsStanding();
-        assertEquals(9, pinsStandingAfter);
+        assertEquals(9, lane.getPinsStanding());
     }
 
 
