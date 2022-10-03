@@ -12,6 +12,10 @@ public class Game {
         return currentLane;
     }
 
+    public Player getCurrentPlayer() {
+        return null;
+    }
+
     public void roll(int pinsKockedDown){
         this.currentLane.roll(pinsKockedDown);
     }
