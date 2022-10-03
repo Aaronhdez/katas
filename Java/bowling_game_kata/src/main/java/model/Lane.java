@@ -17,6 +17,7 @@ public class Lane {
     }
 
     public void roll(int pinsTakenDown) {
-        this.currentPinsStanding = this.currentPinsStanding - pinsTakenDown;
+        currentPinsStanding = (currentPinsStanding - pinsTakenDown) < 0 ?
+            0 : currentPinsStanding - pinsTakenDown;
     }
 }
