@@ -1,11 +1,13 @@
 package model;
 
 public class Game {
-    private Lane currentLane;
+    private final Player currentPlayer;
+    private final Lane currentLane;
     private int score;
 
     public Game() {
         this.currentLane = new Lane();
+        this.currentPlayer = new Player();
     }
 
     public Lane getCurrentLane() {
@@ -13,7 +15,7 @@ public class Game {
     }
 
     public Player getCurrentPlayer() {
-        return null;
+        return this.currentPlayer;
     }
 
     public void roll(int pinsKockedDown){
