@@ -51,4 +51,11 @@ public class GameTest {
         assertEquals(game.getCurrentPlayer().getStrike(), true);
     }
 
+    @Test
+    public void frame_should_increase_if_a_strike_is_done(){
+        Game game = new Game();
+        game.roll(10);
+        assertEquals(game.getCurrentFrame(), 2);
+    }
+
 }
