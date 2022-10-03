@@ -25,7 +25,11 @@ public class Game {
         this.currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
 
-        if(rollsPlayed == 2){
+        updateFrameNumber();
+    }
+
+    private void updateFrameNumber() {
+        if(rollsPlayed % 2 == 0 && currentFrame < 10){
             currentFrame += 1;
         }
     }
