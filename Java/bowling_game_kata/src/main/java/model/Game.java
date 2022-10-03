@@ -25,20 +25,29 @@ public class Game {
     }
 
     public void roll(int pinsKnockedDown){
-        this.currentLane.roll(pinsKnockedDown);
+        currentLane.roll(pinsKnockedDown);
         currentPlayer.addScore(pinsKnockedDown);
-        if(pinsKnockedDown == 10){
-            getCurrentPlayer().setStrike(true);
-            rollsPlayed += 1;
-        }
-        rollsPlayed += 1;
+        managePoints(pinsKnockedDown);
+        increaseRollsPlayed();
         updateFrameNumber();
+    }
+
+    private void managePoints(int pinsKnockedDown) {
+        if(pinsKnockedDown == 10){
+            currentPlayer.setBonusRolls(2);
+            increaseRollsPlayed();
+        }
+    }
+
+    private void increaseRollsPlayed() {
+        rollsPlayed += 1;
     }
 
     private void updateFrameNumber() {
         if(rollsPlayed % 2 == 0 && currentFrame < 10){
             currentFrame += 1;
         }
+        currentLane.reloadLane();
     }
 
     public int score(){

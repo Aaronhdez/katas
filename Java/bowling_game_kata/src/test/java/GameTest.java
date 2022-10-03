@@ -58,7 +58,17 @@ public class GameTest {
     public void player_should_receive_strike_status_if_a_strike_is_done(){
         game = new Game();
         game.roll(10);
-        assertEquals(game.getCurrentPlayer().getStrike(), true);
+        assertEquals(game.getCurrentPlayer().getBonusRolls(), 2);
+    }
+
+    @Test
+    public void player_should_receive_bonuses_if_a_strike_is_done(){
+        game = new Game();
+        game.roll(10);
+        assertEquals(game.score(), 10);
+        game.roll(2);
+        game.roll(2);
+        assertEquals(game.score(), 18);
     }
 
 }
