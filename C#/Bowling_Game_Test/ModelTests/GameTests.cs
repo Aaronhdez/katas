@@ -99,12 +99,6 @@ namespace Bowling_Game_Test.ModelTests {
         }
 
         [Test]
-        public void Player_should_receive_a_double_bonus_if_an_strike_is_done() {
-            game.Roll(10);
-            Assert.AreEqual(2, game.GetCurrentBonus());
-        }
-
-        [Test]
         public void Score_should_be_increased_if_bonus_are_received() {
             game.Roll(10);
             game.Roll(1);
@@ -122,6 +116,12 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(pins1);
             game.Roll(pins2);
             Assert.AreEqual(expected, game.GetCurrentBonus());
+        }
+
+        [Test]
+        public void Player_should_receive_a_double_bonus_if_an_strike_is_done() {
+            game.Roll(10);
+            Assert.AreEqual(2, game.GetCurrentBonus());
         }
 
     }
