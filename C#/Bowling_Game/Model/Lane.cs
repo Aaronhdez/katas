@@ -7,17 +7,18 @@ namespace Bowling_Game.Model {
         public Lane() {
             pinsStanding = 10;
         }
+
         public int GetPinsStanding(){
             return pinsStanding;
         }
 
         public void Remove(int pinsKnockedDown) {
-            if (CanRemove(pinsKnockedDown)) {
+            if (PinsCanBeKnockedDown(pinsKnockedDown)) {
                 pinsStanding -= pinsKnockedDown;
             }
         }
 
-        private bool CanRemove(int pinsKnockedDown) {
+        private bool PinsCanBeKnockedDown(int pinsKnockedDown) {
             return pinsKnockedDown > -1 && pinsKnockedDown < 11;
         }
     }
