@@ -39,7 +39,7 @@ namespace Bowling_Game.Model {
             } else if (ItsASpare()) {
                 UpdateGameOnSpare();
             } else { 
-                UpdateGameOnNormalRoll(); 
+                UpdateGame(); 
             }
         }
 
@@ -54,6 +54,7 @@ namespace Bowling_Game.Model {
         private bool ItsAStrike(int pins) {
             return pins == 10 && rollsPlayed % 2 == 0;
         }
+
         private bool ItsASpare() {
             return Lane.GetPinsStanding() == 0 && rollsPlayed % 2 == 1;
         }
@@ -67,7 +68,7 @@ namespace Bowling_Game.Model {
             bonus = 1;
         }
 
-        private void UpdateGameOnNormalRoll() {
+        private void UpdateGame() {
         }
 
         private void UpdateRollsPlayed() {
