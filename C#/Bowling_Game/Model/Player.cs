@@ -9,10 +9,11 @@ namespace Bowling_Game.Model {
         }
 
         public int GetScore() {
-            return 0;
+            return score;
         }
 
         public void AddScore(int points) {
+            score += points;
         }
     }
 }
