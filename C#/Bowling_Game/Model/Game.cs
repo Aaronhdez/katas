@@ -23,7 +23,7 @@ namespace Bowling_Game.Model {
         }
 
         public void Roll(int pins) {
-            rollsPlayed++;
+            rollsPlayed = (rollsPlayed+1) % 2;
         }
 
         public int Score(){
