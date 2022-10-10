@@ -13,9 +13,13 @@ namespace Bowling_Game.Model {
         }
 
         public void AddScore(int points) {
-            if (points >= 0) { 
+            if (ArePositive(points)) {
                 score += points;
             }
+        }
+
+        private bool ArePositive(int points) {
+            return points >= 0;
         }
     }
 }
