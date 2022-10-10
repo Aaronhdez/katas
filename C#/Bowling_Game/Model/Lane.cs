@@ -1,4 +1,6 @@
-﻿namespace Bowling_Game.Model {
+﻿using System;
+
+namespace Bowling_Game.Model {
     public class Lane {
         private int pinsStanding;
 
@@ -18,6 +20,10 @@
 
         private bool PinsCanBeKnockedDown(int pinsKnockedDown) {
             return pinsKnockedDown > -1 && pinsKnockedDown < 11;
+        }
+
+        public void Reload() {
+            pinsStanding = 10;
         }
     }
 }
