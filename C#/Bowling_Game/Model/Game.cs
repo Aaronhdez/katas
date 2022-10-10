@@ -47,6 +47,7 @@ namespace Bowling_Game.Model {
         private void UpdateFramesPlayed() {
             if (rollsPlayed == 0) {
                 framesPlayed++;
+                Lane.Reload();
             }
         }
 
