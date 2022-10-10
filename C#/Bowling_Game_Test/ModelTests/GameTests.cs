@@ -48,5 +48,13 @@ namespace Bowling_Game_Test.ModelTests {
             Assert.AreEqual(1, game.RollsPlayed());
         }
 
+        [Test]
+        public void RollsPlayed_not_be_higher_than_2() {
+            game.Roll(1);
+            game.Roll(1);
+            game.Roll(1);
+            Assert.AreEqual(1, game.RollsPlayed());
+        }
+
     }
 }
