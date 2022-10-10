@@ -34,11 +34,15 @@ namespace Bowling_Game.Model {
         private void UpdateGameStatus(int pins) {
             lane.Remove(pins);
             player.AddScore(pins);
-            if (pins == 10) {
+            if (ItsAStrike(pins)) {
                 UpdateGameOnStrike();
             } else {
                 UpdateGameOnNormalRoll();
             }
+        }
+
+        private bool ItsAStrike(int pins) {
+            return pins == 10 && rollsPlayed % 2 == 0;
         }
 
         private void UpdateGameOnStrike() {
