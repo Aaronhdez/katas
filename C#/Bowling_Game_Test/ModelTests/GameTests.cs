@@ -81,5 +81,11 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(1);
             Assert.AreEqual(10, game.Lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Lane_should_be_reloaded_after_a_strike() {
+            game.Roll(10);
+            Assert.AreEqual(10, game.Lane.GetPinsStanding());
+        }
     }
 }
