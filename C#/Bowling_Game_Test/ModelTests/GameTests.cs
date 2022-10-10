@@ -26,5 +26,10 @@ namespace Bowling_Game_Test.ModelTests {
         public void Score_must_be_zero_when_the_game_starts() {
             Assert.AreEqual(0, game.Score());
         }
+
+        [Test]
+        public void Lane_must_have_all_pins_up_when_the_game_starts() {
+            Assert.AreEqual(10, game.Lane.GetPinsStanding());
+        }
     }
 }
