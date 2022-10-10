@@ -56,5 +56,12 @@ namespace Bowling_Game_Test.ModelTests {
             Assert.AreEqual(1, game.RollsPlayed());
         }
 
+        [Test]
+        public void Frames_should_increase_each_two_rolls() {
+            game.Roll(1);
+            game.Roll(1);
+            Assert.AreEqual(2, game.FramesPlayed());
+        }
+
     }
 }
