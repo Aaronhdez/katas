@@ -10,11 +10,13 @@ namespace Bowling_Game.Model {
         public Lane Lane { get => lane; set => lane = value; }
 
         public Game() {
+            framesPlayed = 1;
         }
 
         public Game(Player player, Lane lane) {
             this.player = player;
             this.lane = lane;
+            framesPlayed = 1;
         }
 
         public void Roll(int pins) {
@@ -26,7 +28,7 @@ namespace Bowling_Game.Model {
         }
 
         public int FramesPlayed() {
-            return -1;
+            return framesPlayed;
         }
     }
 }
