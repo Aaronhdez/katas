@@ -19,7 +19,7 @@
         }
 
         public int Score(){
-            return -1;
+            return player.GetScore();
         }
 
     }
