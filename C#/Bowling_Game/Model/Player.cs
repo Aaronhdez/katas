@@ -19,7 +19,7 @@ namespace Bowling_Game.Model {
         }
 
         private bool ArePositive(int points) {
-            return points >= 0;
+            return points >= 0 && points < 11;
         }
     }
 }
