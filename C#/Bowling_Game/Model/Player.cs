@@ -11,5 +11,8 @@ namespace Bowling_Game.Model {
         public int GetScore() {
             return 0;
         }
+
+        public void AddScore(int points) {
+        }
     }
 }
