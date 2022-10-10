@@ -23,6 +23,12 @@ namespace Bowling_Game.Model {
         }
 
         public void Roll(int pins) {
+            if (pins == 10) {
+
+                rollsPlayed++;
+            } else { 
+            
+            }
             UpdateRollsPlayed();
             UpdateFramesPlayed();
         }
