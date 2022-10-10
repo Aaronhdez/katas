@@ -20,5 +20,11 @@ namespace Bowling_Game_Test.ModelTests {
             lane.Remove(1);
             Assert.AreEqual(9, lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Lane_cannot_have_more_than_10_pins_after_a_roll() {
+            lane.Remove(-1);
+            Assert.AreEqual(10, lane.GetPinsStanding());
+        }
     }
 }
