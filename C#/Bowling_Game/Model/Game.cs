@@ -19,7 +19,7 @@
         }
 
         public int Score(){
-            return 0;
+            return -1;
         }
 
     }

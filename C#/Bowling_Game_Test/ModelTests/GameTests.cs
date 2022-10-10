@@ -21,5 +21,10 @@ namespace Bowling_Game_Test.ModelTests {
         public void Game_must_have_a_lane_assigned() {
             Assert.IsNotNull(game.Lane);
         }
+
+        [Test]
+        public void Score_must_be_zero_when_the_game_starts() {
+            Assert.AreEqual(0, game.Score());
+        }
     }
 }
