@@ -24,13 +24,20 @@ namespace Bowling_Game.Model {
 
         public void Roll(int pins) {
             if (pins == 10) {
-
-                rollsPlayed++;
-            } else { 
-            
+                UpdateGameOnStrike();
+            } else {
+                UpdateGameOnNormalRoll();
             }
             UpdateRollsPlayed();
             UpdateFramesPlayed();
+        }
+
+        private void UpdateGameOnStrike() {
+            rollsPlayed++;
+        }
+
+        private void UpdateGameOnNormalRoll() {
+            throw new NotImplementedException();
         }
 
         private void UpdateRollsPlayed() {
