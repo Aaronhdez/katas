@@ -12,7 +12,7 @@ namespace Bowling_Game.Model {
         }
 
         public void Remove(int pinsKnockedDown) {
-            
+            pinsStanding -= pinsKnockedDown;
         }
     }
 }
