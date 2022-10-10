@@ -27,5 +27,11 @@ namespace Bowling_Game_Test.ModelTests {
             player.AddScore(-1);
             Assert.AreEqual(1, player.GetScore());
         }
+
+        [Test]
+        public void Player_score_can_never_increase_more_than_10_at_once() {
+            player.AddScore(11);
+            Assert.AreEqual(10, player.GetScore());
+        }
     }
 }
