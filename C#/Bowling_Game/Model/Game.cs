@@ -6,6 +6,7 @@ namespace Bowling_Game.Model {
         private Lane lane;
         private int framesPlayed;
         private int rollsPlayed;
+        private int bonus;
 
         public Player Player { get => player; set => player = value; }
         public Lane Lane { get => lane; set => lane = value; }
@@ -13,6 +14,7 @@ namespace Bowling_Game.Model {
         public Game() {
             framesPlayed = 1;
             rollsPlayed = 0;
+            bonus = 0;
         }
 
         public Game(Player player, Lane lane) {
@@ -20,6 +22,7 @@ namespace Bowling_Game.Model {
             this.lane = lane;
             framesPlayed = 1;
             rollsPlayed = 0;
+            bonus = 0;
         }
 
         public void Roll(int pins) {
@@ -39,6 +42,7 @@ namespace Bowling_Game.Model {
         }
 
         private void UpdateGameOnStrike() {
+            bonus = 2;
             rollsPlayed++;
         }
 
@@ -69,7 +73,7 @@ namespace Bowling_Game.Model {
         }
 
         public int GetCurrentBonus() {
-            return 0;
+            return bonus;
         }
     }
 }
