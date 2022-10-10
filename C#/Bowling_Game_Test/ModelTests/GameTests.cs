@@ -31,5 +31,10 @@ namespace Bowling_Game_Test.ModelTests {
         public void Lane_must_have_all_pins_up_when_the_game_starts() {
             Assert.AreEqual(10, game.Lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Game_Should_Start_in_Frame_1() {
+            Assert.AreEqual(1, game.FramesPlayed());
+        }
     }
 }

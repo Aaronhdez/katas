@@ -1,7 +1,10 @@
-﻿namespace Bowling_Game.Model {
+﻿using System;
+
+namespace Bowling_Game.Model {
     public class Game {
         private Player player;
         private Lane lane;
+        private int framesPlayed;
 
         public Player Player { get => player; set => player = value; }
         public Lane Lane { get => lane; set => lane = value; }
@@ -22,5 +25,8 @@
             return player.GetScore();
         }
 
+        public int FramesPlayed() {
+            return -1;
+        }
     }
 }
