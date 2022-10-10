@@ -104,5 +104,12 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(10);
             Assert.AreEqual(2, game.GetCurrentBonus());
         }
+
+        [Test]
+        public void Score_should_be_increased_if_bonus_are_received() {
+            game.Roll(10);
+            game.Roll(1);
+            Assert.AreEqual(12, game.GetCurrentBonus());
+        }
     }
 }
