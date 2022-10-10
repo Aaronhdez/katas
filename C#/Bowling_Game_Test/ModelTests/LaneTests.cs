@@ -26,5 +26,11 @@ namespace Bowling_Game_Test.ModelTests {
             lane.Remove(-1);
             Assert.AreEqual(10, lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Lane_cannot_have_negative_pins() {
+            lane.Remove(11);
+            Assert.AreEqual(10, lane.GetPinsStanding());
+        }
     }
 }
