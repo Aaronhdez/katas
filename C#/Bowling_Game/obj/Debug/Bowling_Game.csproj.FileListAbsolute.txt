@@ -7,3 +7,4 @@ D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.csproj.CoreCompileInpu
 D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.csproj.CopyComplete
 D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.exe
 D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.pdb
+D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.csproj.AssemblyReference.cache

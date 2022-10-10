@@ -1,4 +1,6 @@
-﻿namespace Bowling_Game.Model {
+﻿using System;
+
+namespace Bowling_Game.Model {
     public class Lane {
         private int pinsStanding;
 
@@ -7,6 +9,10 @@
         }
         public int GetPinsStanding(){
             return pinsStanding;
+        }
+
+        public void Remove(int pinsKnockedDown) {
+            
         }
     }
 }

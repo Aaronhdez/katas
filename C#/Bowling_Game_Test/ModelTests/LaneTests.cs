@@ -12,8 +12,13 @@ namespace Bowling_Game_Test.ModelTests {
 
         [Test]
         public void Lane_has_10_pins_standing_when_created() {
-            lane = new Lane();
             Assert.AreEqual(10, lane.GetPinsStanding());
+        }
+
+        [Test]
+        public void Lane_has_less_than_10_pins_standing_if_at_least_1_is_knocked_down() {
+            lane.Remove(1);
+            Assert.AreEqual(9, lane.GetPinsStanding());
         }
     }
 }
