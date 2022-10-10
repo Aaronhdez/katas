@@ -12,7 +12,7 @@ namespace Bowling_Game.Model {
         }
 
         public void Remove(int pinsKnockedDown) {
-            if(pinsKnockedDown > -1) { 
+            if(pinsKnockedDown > -1 && pinsKnockedDown < 11) { 
                 pinsStanding -= pinsKnockedDown;
             }
         }
