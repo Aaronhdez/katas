@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bowling_Game.Model {
     public class Lane {
-        private int pinsAvailable;
+        private int pinsStanding;
 
         public Lane() {
-            this.pinsAvailable = 10;
+            pinsStanding = 10;
         }
         public int GetPinsStanding(){
-            return 0;
+            return pinsStanding;
         }
     }
 }
