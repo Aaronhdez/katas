@@ -50,9 +50,9 @@ namespace Bowling_Game_Test.ModelTests {
 
         [Test]
         public void RollsPlayed_not_be_higher_than_2() {
-            game.Roll(1);
-            game.Roll(1);
-            game.Roll(1);
+            for (int rolls = 0; rolls <= 2; rolls++) { 
+                game.Roll(1);
+            }
             Assert.AreEqual(1, game.RollsPlayed());
         }
 
