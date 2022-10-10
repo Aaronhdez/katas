@@ -38,6 +38,7 @@ namespace Bowling_Game.Model {
         }
 
         private void UpdateGameOnNormalRoll(int pins) {
+            player.AddScore(pins);
         }
 
         private void UpdateRollsPlayed() {
