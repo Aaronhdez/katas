@@ -89,6 +89,9 @@ namespace Bowling_Game_Test.ModelTests {
         }
 
         [TestCase(1, 1)]
+        [TestCase(2, 2)]
+        [TestCase(3, 3)]
+        [TestCase(4, 4)]
         [TestCase(10, 10)]
         public void Player_score_should_be_increase_on_each_roll(int pins, int expected) {
             game.Roll(pins);
