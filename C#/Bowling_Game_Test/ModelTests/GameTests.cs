@@ -74,5 +74,12 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(1);
             Assert.AreEqual(9, game.Lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Lane_should_be_reloaded_when_frames_are_increased() {
+            game.Roll(1);
+            game.Roll(1);
+            Assert.AreEqual(10, game.Lane.GetPinsStanding());
+        }
     }
 }
