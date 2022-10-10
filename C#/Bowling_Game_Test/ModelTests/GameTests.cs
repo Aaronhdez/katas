@@ -98,7 +98,6 @@ namespace Bowling_Game_Test.ModelTests {
             Assert.AreEqual(expected, game.Score());
         }
 
-
         [Test]
         public void Player_should_receive_a_double_bonus_if_an_strike_is_done() {
             game.Roll(10);
