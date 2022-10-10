@@ -30,20 +30,19 @@ namespace Bowling_Game.Model {
 
         private void UpdateGameStatus(int pins) {
             lane.Remove(pins);
+            player.AddScore(pins);
             if (pins == 10) {
-                UpdateGameOnStrike(pins);
+                UpdateGameOnStrike();
             } else {
-                UpdateGameOnNormalRoll(pins);
+                UpdateGameOnNormalRoll();
             }
         }
 
-        private void UpdateGameOnStrike(int pins) {
-            player.AddScore(pins);
+        private void UpdateGameOnStrike() {
             rollsPlayed++;
         }
 
-        private void UpdateGameOnNormalRoll(int pins) {
-            player.AddScore(pins);
+        private void UpdateGameOnNormalRoll() {
         }
 
         private void UpdateRollsPlayed() {
