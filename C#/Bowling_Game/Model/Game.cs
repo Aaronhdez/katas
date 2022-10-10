@@ -24,13 +24,17 @@ namespace Bowling_Game.Model {
 
         public void Roll(int pins) {
             lane.Remove(pins);
+            UpdateGameStatus(pins);
+            UpdateRollsPlayed();
+            UpdateFramesPlayed();
+        }
+
+        private void UpdateGameStatus(int pins) {
             if (pins == 10) {
                 UpdateGameOnStrike();
             } else {
                 UpdateGameOnNormalRoll(pins);
             }
-            UpdateRollsPlayed();
-            UpdateFramesPlayed();
         }
 
         private void UpdateGameOnStrike() {
