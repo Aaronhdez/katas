@@ -27,7 +27,7 @@ namespace Bowling_Game.Model {
             if (pins == 10) {
                 UpdateGameOnStrike();
             } else {
-                UpdateGameOnNormalRoll();
+                UpdateGameOnNormalRoll(pins);
             }
             UpdateRollsPlayed();
             UpdateFramesPlayed();
@@ -37,7 +37,7 @@ namespace Bowling_Game.Model {
             rollsPlayed++;
         }
 
-        private void UpdateGameOnNormalRoll() {
+        private void UpdateGameOnNormalRoll(int pins) {
         }
 
         private void UpdateRollsPlayed() {

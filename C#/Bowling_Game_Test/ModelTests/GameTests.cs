@@ -87,5 +87,12 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(10);
             Assert.AreEqual(10, game.Lane.GetPinsStanding());
         }
+
+        [Test]
+        public void Player_score_should_be_increase_on_each_roll() {
+            game.Roll(1);
+            Assert.AreEqual(1, game.Player.GetScore());
+        }
+
     }
 }
