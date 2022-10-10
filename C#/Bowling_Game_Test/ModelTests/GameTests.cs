@@ -95,7 +95,7 @@ namespace Bowling_Game_Test.ModelTests {
         [TestCase(10, 10)]
         public void Player_score_should_be_increase_on_each_roll(int pins, int expected) {
             game.Roll(pins);
-            Assert.AreEqual(expected, game.Player.GetScore());
+            Assert.AreEqual(expected, game.Score());
         }
 
 
@@ -109,7 +109,8 @@ namespace Bowling_Game_Test.ModelTests {
         public void Score_should_be_increased_if_bonus_are_received() {
             game.Roll(10);
             game.Roll(1);
-            Assert.AreEqual(12, game.GetCurrentBonus());
+            game.Roll(1);
+            Assert.AreEqual(14, game.Score());
         }
     }
 }

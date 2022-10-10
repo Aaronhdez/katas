@@ -34,6 +34,10 @@ namespace Bowling_Game.Model {
         private void UpdateGameStatus(int pins) {
             lane.Remove(pins);
             player.AddScore(pins);
+            if (bonus > 0) {
+                player.AddScore(pins);
+                bonus--;
+            }
             if (ItsAStrike(pins)) {
                 UpdateGameOnStrike();
             } else {
