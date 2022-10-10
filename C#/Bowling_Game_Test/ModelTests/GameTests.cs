@@ -63,5 +63,11 @@ namespace Bowling_Game_Test.ModelTests {
             Assert.AreEqual(2, game.FramesPlayed());
         }
 
+        [Test]
+        public void Frames_should_increase_in_case_of_Strike() {
+            game.Roll(10);
+            Assert.AreEqual(2, game.FramesPlayed());
+        }
+
     }
 }
