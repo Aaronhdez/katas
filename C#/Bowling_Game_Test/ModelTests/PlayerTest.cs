@@ -20,5 +20,12 @@ namespace Bowling_Game_Test.ModelTests {
             player.AddScore(1);
             Assert.AreEqual(1, player.GetScore());
         }
+
+        [Test]
+        public void Player_score_can_never_decrease() {
+            player.AddScore(1);
+            player.AddScore(-1);
+            Assert.AreEqual(1, player.GetScore());
+        }
     }
 }
