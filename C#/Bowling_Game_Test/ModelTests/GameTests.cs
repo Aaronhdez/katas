@@ -97,7 +97,7 @@ namespace Bowling_Game_Test.ModelTests {
         [Test]
         public void Player_score_should_be_increase_on_Strike() {
             game.Roll(10);
-            Assert.AreEqual(1, game.Player.GetScore());
+            Assert.AreEqual(10, game.Player.GetScore());
         }
 
     }
