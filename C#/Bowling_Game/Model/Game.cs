@@ -30,5 +30,9 @@ namespace Bowling_Game.Model {
         public int FramesPlayed() {
             return framesPlayed;
         }
+
+        public double RollsPlayed() {
+            return -1;
+        }
     }
 }
