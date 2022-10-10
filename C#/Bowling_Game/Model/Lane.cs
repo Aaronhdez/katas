@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Bowling_Game.Model {
+﻿namespace Bowling_Game.Model {
     public class Lane {
         private int pinsStanding;
 

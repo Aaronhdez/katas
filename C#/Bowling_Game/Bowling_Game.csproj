@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Model\Lane.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="Model\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
