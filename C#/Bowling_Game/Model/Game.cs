@@ -24,6 +24,9 @@ namespace Bowling_Game.Model {
 
         public void Roll(int pins) {
             rollsPlayed = (rollsPlayed+1) % 2;
+            if (rollsPlayed == 0) {
+                framesPlayed++;
+            }
         }
 
         public int Score(){
