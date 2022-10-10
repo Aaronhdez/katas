@@ -23,7 +23,15 @@ namespace Bowling_Game.Model {
         }
 
         public void Roll(int pins) {
-            rollsPlayed = (rollsPlayed+1) % 2;
+            UpdateRollsPlayed();
+            UpdateFramesPlayed();
+        }
+
+        private void UpdateRollsPlayed() {
+            rollsPlayed = (rollsPlayed + 1) % 2;
+        }
+
+        private void UpdateFramesPlayed() {
             if (rollsPlayed == 0) {
                 framesPlayed++;
             }
