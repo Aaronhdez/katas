@@ -1,0 +1,9 @@
+D:\Proyectos\Katas\C#\Bowling_Game\bin\Debug\Bowling_Game.exe.config
+D:\Proyectos\Katas\C#\Bowling_Game\bin\Debug\Bowling_Game.exe
+D:\Proyectos\Katas\C#\Bowling_Game\bin\Debug\Bowling_Game.pdb
+D:\Proyectos\Katas\C#\Bowling_Game\bin\Debug\nunit.framework.dll
+D:\Proyectos\Katas\C#\Bowling_Game\bin\Debug\nunit.framework.xml
+D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.csproj.CoreCompileInputs.cache
+D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.csproj.CopyComplete
+D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.exe
+D:\Proyectos\Katas\C#\Bowling_Game\obj\Debug\Bowling_Game.pdb
