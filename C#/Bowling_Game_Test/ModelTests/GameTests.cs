@@ -111,5 +111,13 @@ namespace Bowling_Game_Test.ModelTests {
             game.Roll(1);
             Assert.AreEqual(14, game.Score());
         }
+
+        [Test]
+        public void Player_should_receive_a_single_bonus_if_an_spare_is_done() {
+            game.Roll(1);
+            game.Roll(9);
+            Assert.AreEqual(1, game.GetCurrentBonus());
+        }
+
     }
 }
