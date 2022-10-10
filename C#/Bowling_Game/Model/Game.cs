@@ -67,5 +67,9 @@ namespace Bowling_Game.Model {
         public double RollsPlayed() {
             return rollsPlayed;
         }
+
+        public int GetCurrentBonus() {
+            return 0;
+        }
     }
 }
