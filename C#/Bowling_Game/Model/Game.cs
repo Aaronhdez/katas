@@ -6,6 +6,14 @@
         public Player Player { get => player; set => player = value; }
         public Lane Lane { get => lane; set => lane = value; }
 
+        public Game() {
+        }
+
+        public Game(Player player, Lane lane) {
+            this.player = player;
+            this.lane = lane;
+        }
+
         public void Roll(int pins) {
 
         }
