@@ -5,18 +5,21 @@ namespace Bowling_Game.Model {
         private Player player;
         private Lane lane;
         private int framesPlayed;
+        private int rollsPlayed;
 
         public Player Player { get => player; set => player = value; }
         public Lane Lane { get => lane; set => lane = value; }
 
         public Game() {
             framesPlayed = 1;
+            rollsPlayed = 0;
         }
 
         public Game(Player player, Lane lane) {
             this.player = player;
             this.lane = lane;
             framesPlayed = 1;
+            rollsPlayed = 0;
         }
 
         public void Roll(int pins) {
@@ -32,7 +35,7 @@ namespace Bowling_Game.Model {
         }
 
         public double RollsPlayed() {
-            return -1;
+            return rollsPlayed;
         }
     }
 }
