@@ -69,5 +69,10 @@ namespace Bowling_Game_Test.ModelTests {
             Assert.AreEqual(2, game.FramesPlayed());
         }
 
+        [Test]
+        public void Lane_should_be_remove_pins_when_a_roll_is_done() {
+            game.Roll(1);
+            Assert.AreEqual(9, game.Lane.GetPinsStanding());
+        }
     }
 }

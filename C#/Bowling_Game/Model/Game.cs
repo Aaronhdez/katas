@@ -23,6 +23,7 @@ namespace Bowling_Game.Model {
         }
 
         public void Roll(int pins) {
+            lane.Remove(pins);
             if (pins == 10) {
                 UpdateGameOnStrike();
             } else {
@@ -37,7 +38,6 @@ namespace Bowling_Game.Model {
         }
 
         private void UpdateGameOnNormalRoll() {
-            throw new NotImplementedException();
         }
 
         private void UpdateRollsPlayed() {
