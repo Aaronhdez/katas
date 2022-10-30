@@ -10,9 +10,9 @@ namespace JsonSerializationTests {
 
         [Test]
         public void Get_the_name_of_a_car_when_JSON_is_passed() {
-            string carAsJSON = "{'name' = 'aCarName'}";
+            string carAsJSON = @"{""Name"":""aCarName""}";
             CarSerializer serializer = new CarSerializer();
-            Car dummyCar = serializer.deserialize(carAsJSON);
+            Car dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual("aCarName", dummyCar.Name);
         }
     }
