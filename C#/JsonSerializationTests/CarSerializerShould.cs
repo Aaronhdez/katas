@@ -4,24 +4,27 @@ using JsonSerialization.Model;
 
 namespace JsonSerializationTests {
     public class CarSerializerShould {
+        private CarSerializer serializer;
+        private string carAsJSON;
+        private Car dummyCar;
+
         [SetUp]
         public void Setup() {
-        }
-
-        [Test]
-        public void Get_the_name_of_a_car_when_JSON_is_passed() {
-            string carAsJSON = @"{""Name"":""aCarName""}";
-            CarSerializer serializer = new CarSerializer();
-            Car dummyCar = serializer.Deserialize(carAsJSON);
-            Assert.AreEqual("aCarName", dummyCar.Name);
+            serializer = new CarSerializer();
         }
 
         [Test]
         public void Get_null_when_empty_JSON_is_passed() {
-            string carAsJSON = @"{}";
-            CarSerializer serializer = new CarSerializer();
-            Car dummyCar = serializer.Deserialize(carAsJSON);
+            carAsJSON = @"{}";
+            dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual(null, dummyCar);
+        }
+
+        [Test]
+        public void Get_the_name_of_a_car_when_JSON_is_passed() {
+            carAsJSON = @"{""Name"":""aCarName""}";
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual("aCarName", dummyCar.Name);
         }
     }
 }
