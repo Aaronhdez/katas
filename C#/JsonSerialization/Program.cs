@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace JsonSerialization {
-    class Program {
+    public class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+            // Display the number of command line arguments.
+            Console.WriteLine(args.Length);
         }
     }
 }
