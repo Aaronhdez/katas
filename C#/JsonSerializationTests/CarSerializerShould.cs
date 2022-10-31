@@ -6,6 +6,7 @@ namespace JsonSerializationTests {
     public class CarSerializerShould {
         private CarSerializer serializer;
         private string carAsJSON;
+        private string carAsJSONNoExtras;
         private Car dummyCar;
 
         [SetUp]
@@ -18,6 +19,11 @@ namespace JsonSerializationTests {
                                 { ""Name"":""RadioCD"" },
                                 { ""Name"":""USBPort"" }
                             ]
+                        }";
+            carAsJSONNoExtras = @"{""Name"":""aCarName"",
+                            ""Id"":""aCarId"",
+                            ""Model"":""aCarModel"",
+                            ""Extras"": []
                         }";
         }
 
@@ -50,6 +56,12 @@ namespace JsonSerializationTests {
         public void Get_the_extras_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual("USBPort", dummyCar.Extras[1].Name);
+        }
+
+        [Test]
+        public void Get_no_extras_of_a_car_when_JSON_is_passed_without_extras() {
+            dummyCar = serializer.Deserialize(carAsJSONNoExtras);
+            Assert.AreEqual(0, dummyCar.Extras.Count);
         }
     }
 }
