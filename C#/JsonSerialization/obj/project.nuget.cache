@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9oBc2DhNTSh7KhLQlYe3QKZf2tZmLgwVViYiJIxkeKSEALr8sYG/VJGaT3JBcDNjKV5r/47MDx1cp0mYGkiYXQ==",
+  "success": true,
+  "projectFilePath": "D:\\Proyectos\\Katas\\C#\\JsonSerialization\\JsonSerialization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}
