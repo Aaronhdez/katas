@@ -1,41 +1,22 @@
 using NUnit.Framework;
 using JsonSerialization;
 using JsonSerialization.Model;
+using JsonSerializationTests.DataSamples;
 
 namespace JsonSerializationTests {
     public class CarSerializerShould {
 
+        private string carAsJSON = CarSamples.carAsJSON;
+        private string carAsJSONNoExtras = CarSamples.carAsJSONNoExtras;
+
         private CarSerializer serializer;
         private Car dummyCar;
-        private ImportingData dummyImportingData = new ImportingData("anImportingID", "anOrigin", "aDestination", "aProvider");
-
-        const string carAsJSON = @"{""Name"":""aCarName"",
-                            ""Id"":""aCarId"",
-                            ""Model"":""aCarModel"",
-                            ""Extras"": [
-                                { ""Name"":""RadioCD"" },
-                                { ""Name"":""USBPort"" }
-                            ],
-                            ""ImportingData"":{
-                                ""ImportingID"":""anImportingID"",
-                                ""Origin"":""anOrigin"",
-                                ""Destination"":""aDestination"",
-                                ""Provider"":""aProvider""
-                            }
-                        }";
-        const string carAsJSONNoExtras = @"{""Name"":""aCarName"",
-                            ""Id"":""aCarId"",
-                            ""Model"":""aCarModel"",
-                            ""Extras"": []
-                        }";
+        private ImportingData dummyImportingData;
 
         [SetUp]
         public void Setup() {
             serializer = new CarSerializer();
-            dummyImportingData.ImportingID = "anImportingID";
-            dummyImportingData.Origin = "anOrigin";
-            dummyImportingData.Destination = "aDestination";
-            dummyImportingData.Provider = "aProvider";
+            dummyImportingData = new ImportingData("anImportingID", "anOrigin", "aDestination", "aProvider");
         }
 
         [Test]
