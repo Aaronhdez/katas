@@ -13,6 +13,7 @@ namespace JsonSerialization.Model {
         public FactoryData FactoryData { get; set; }
         public TechnicalData TechnicalData { get; set; }
         public ChassisData ChassisData { get => TechnicalData.ChassisData; set => TechnicalData.ChassisData = value; }
+        public BodyworkData BodyworkData { get => TechnicalData.BodyworkData; set => TechnicalData.BodyworkData = value; }
 
     }
 }
