@@ -7,6 +7,7 @@ namespace JsonSerializationTests {
 
         private CarSerializer serializer;
         private Car dummyCar;
+        private ImportingData dummyImportingData = new ImportingData("anImportingID", "anOrigin", "aDestination", "aProvider");
 
         const string carAsJSON = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
@@ -18,7 +19,7 @@ namespace JsonSerializationTests {
                             ""ImportingData"":{
                                 ""ImportingID"":""anImportingID"",
                                 ""Origin"":""anOrigin"",
-                                ""Destination"":""anOrigin"",
+                                ""Destination"":""aDestination"",
                                 ""Provider"":""aProvider""
                             }
                         }";
@@ -31,6 +32,10 @@ namespace JsonSerializationTests {
         [SetUp]
         public void Setup() {
             serializer = new CarSerializer();
+            dummyImportingData.ImportingID = "anImportingID";
+            dummyImportingData.Origin = "anOrigin";
+            dummyImportingData.Destination = "aDestination";
+            dummyImportingData.Provider = "aProvider";
         }
 
         [Test]
@@ -77,15 +82,9 @@ namespace JsonSerializationTests {
         }
 
         [Test]
-        public void Get_the_Provider_of_a_car_when_JSON_is_passed() {
+        public void Get_all_the_importing_data_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
-            Assert.AreEqual("aProvider", dummyCar.ImportingData.Provider);
-        }
-
-        [Test]
-        public void Get_the_Origin_of_a_car_when_JSON_is_passed() {
-            dummyCar = serializer.Deserialize(carAsJSON);
-            Assert.AreEqual("anOrigin", dummyCar.ImportingData.Origin);
+            Assert.AreEqual(dummyImportingData, dummyCar.ImportingData);
         }
     }
 }

@@ -1,7 +1,3 @@
-D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.GeneratedMSBuildEditorConfig.editorconfig
-D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.AssemblyInfoInputs.cache
-D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.AssemblyInfo.cs
-D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.csproj.CoreCompileInputs.cache
 D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\JsonSerialization.deps.json
 D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\JsonSerialization.runtimeconfig.json
 D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\JsonSerialization.runtimeconfig.dev.json
@@ -97,6 +93,10 @@ D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\zh-Hant\Mic
 D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\JsonSerialization.dll
 D:\Proyectos\Katas\C#\JsonSerializationTests\bin\Debug\netcoreapp3.1\JsonSerialization.pdb
 D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.csproj.AssemblyReference.cache
+D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.AssemblyInfoInputs.cache
+D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.AssemblyInfo.cs
+D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.csproj.CoreCompileInputs.cache
 D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.csproj.CopyComplete
 D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.dll
 D:\Proyectos\Katas\C#\JsonSerializationTests\obj\Debug\netcoreapp3.1\JsonSerializationTests.pdb
