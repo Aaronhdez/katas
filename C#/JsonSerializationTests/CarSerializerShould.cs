@@ -11,46 +11,18 @@ namespace JsonSerializationTests {
 
         private readonly string carAsJSON = CarSamples.carAsJSON;
         private readonly string carAsJSONNoExtras = CarSamples.carAsJSONNoExtras;
+        private readonly ImportingData dummyImportingData = CarSamples.dummyImportingData;
+        private readonly FactoryData dummyFactoryData = CarSamples.dummyFactoryData;
+        private readonly ChassisData dummyChassisData = CarSamples.dummyChassisData;
+        private readonly BodyworkData dummyBodyworkData = CarSamples.dummyBodyworkData;
+        private readonly EngineData dummyEngineData = CarSamples.dummyEngineData;
 
         private CarSerializer serializer;
         private Car dummyCar;
-        private ImportingData dummyImportingData;
-        private FactoryData dummyFactoryData;
-        private ChassisData dummyChassisData;
-        private BodyworkData dummyBodyworkData;
-        private EngineData dummyEngineData;
 
         [SetUp]
         public void Setup() {
             serializer = new CarSerializer();
-            dummyImportingData = new ImportingData(
-                "anImportingID", 
-                "anOrigin", 
-                "aDestination", 
-                "aProvider");
-            dummyFactoryData = new FactoryData(
-                "aFactoryID",
-                "aFactoryOwner",
-                "aFactoryCountry",
-                "aFactoryCountryState",
-                "1",
-                new DateTime(1900,01,01),
-                new DateTime(1900,01,02));
-            dummyChassisData = new ChassisData(
-                "aChassisID",
-                "aProducerID",
-                "aFactoryID",
-                "aFactoryOwner");
-            dummyBodyworkData = new BodyworkData(
-                "aBodyworkID",
-                "aProducerID",
-                "aFactoryID",
-                "aFactoryOwner");
-            dummyEngineData = new EngineData(
-                "aEngineID",
-                "aProducerID",
-                "aFactoryID",
-                "aFactoryOwner");
         }
 
         [Test]
