@@ -7,13 +7,14 @@ using System;
 namespace JsonSerializationTests {
     public class CarSerializerShould {
 
-        private string carAsJSON = CarSamples.carAsJSON;
-        private string carAsJSONNoExtras = CarSamples.carAsJSONNoExtras;
+        private readonly string carAsJSON = CarSamples.carAsJSON;
+        private readonly string carAsJSONNoExtras = CarSamples.carAsJSONNoExtras;
 
         private CarSerializer serializer;
         private Car dummyCar;
         private ImportingData dummyImportingData;
         private FactoryData dummyFactoryData;
+        private ChassisData dummyChassisData;
 
         [SetUp]
         public void Setup() {
@@ -30,8 +31,8 @@ namespace JsonSerializationTests {
                 "aFactoryCountryState",
                 "1",
                 new DateTime(1900,01,01),
-                new DateTime(1900,01,02)
-                );
+                new DateTime(1900,01,02));
+            dummyChassisData = new ChassisData();
         }
 
         [Test]
@@ -87,6 +88,12 @@ namespace JsonSerializationTests {
         public void Get_all_the_factory_data_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual(dummyFactoryData, dummyCar.FactoryData);
+        }
+
+        [Test]
+        public void Get_all_the_chassis_data_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual(dummyChassisData, dummyCar.ChassisData);
         }
     }
 }
