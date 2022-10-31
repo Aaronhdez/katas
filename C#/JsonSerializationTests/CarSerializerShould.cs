@@ -15,6 +15,7 @@ namespace JsonSerializationTests {
         private ImportingData dummyImportingData;
         private FactoryData dummyFactoryData;
         private ChassisData dummyChassisData;
+        private BodyworkData dummyBodyworkData;
 
         [SetUp]
         public void Setup() {
@@ -34,6 +35,11 @@ namespace JsonSerializationTests {
                 new DateTime(1900,01,02));
             dummyChassisData = new ChassisData(
                 "aChassisID",
+                "aProducerID",
+                "aFactoryID",
+                "aFactoryOwner");
+            dummyBodyworkData = new BodyworkData(
+                "aBodyworkID",
                 "aProducerID",
                 "aFactoryID",
                 "aFactoryOwner");
@@ -98,6 +104,12 @@ namespace JsonSerializationTests {
         public void Get_all_the_chassis_data_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual(dummyChassisData, dummyCar.ChassisData);
+        }
+
+        [Test]
+        public void Get_all_the_bodywork_data_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual(dummyBodyworkData, dummyCar.BodyworkData);
         }
     }
 }
