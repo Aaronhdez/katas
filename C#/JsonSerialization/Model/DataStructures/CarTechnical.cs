@@ -1,7 +1,7 @@
 ﻿using JsonSerialization.Model.DataCategories;
 using JsonSerialization.Model.TechnicalDataFeatures;
 
-namespace JsonSerialization.Model {
+namespace JsonSerialization.Model.DataStructures {
     public class CarTechnical {
         public string Name { get; set; }
         public string Id { get; set; }

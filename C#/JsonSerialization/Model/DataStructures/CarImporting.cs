@@ -1,7 +1,7 @@
 ﻿using JsonSerialization.Model.DataCategories;
 using System.Collections.Generic;
 
-namespace JsonSerialization.Model {
+namespace JsonSerialization.Model.DataStructures {
     public class CarImporting {
         public string Name { get; set; }
         public string Id { get; set; }

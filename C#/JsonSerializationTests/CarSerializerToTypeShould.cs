@@ -1,6 +1,7 @@
 ﻿using JsonSerialization.Model;
 using JsonSerialization.Model.Controllers;
 using JsonSerialization.Model.DataCategories;
+using JsonSerialization.Model.DataStructures;
 using JsonSerialization.Model.TechnicalDataFeatures;
 using JsonSerializationTests.DataSamples;
 using NUnit.Framework;
