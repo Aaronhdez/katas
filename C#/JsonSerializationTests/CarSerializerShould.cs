@@ -8,15 +8,21 @@ namespace JsonSerializationTests {
         private CarSerializer serializer;
         private Car dummyCar;
 
-        private const string carAsJSON = @"{""Name"":""aCarName"",
+        const string carAsJSON = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
                             ""Model"":""aCarModel"",
                             ""Extras"": [
                                 { ""Name"":""RadioCD"" },
                                 { ""Name"":""USBPort"" }
-                            ]
+                            ],
+                            ""ImportingData"":{
+                                ""ImportingID"":""anImportingID"",
+                                ""Origin"":""anOrigin"",
+                                ""Destination"":""anOrigin"",
+                                ""Provider"":""aProvider""
+                            }
                         }";
-        private const string carAsJSONNoExtras = @"{""Name"":""aCarName"",
+        const string carAsJSONNoExtras = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
                             ""Model"":""aCarModel"",
                             ""Extras"": []
@@ -62,6 +68,12 @@ namespace JsonSerializationTests {
         public void Get_no_extras_of_a_car_when_JSON_is_passed_without_extras() {
             dummyCar = serializer.Deserialize(carAsJSONNoExtras);
             Assert.AreEqual(0, dummyCar.Extras.Count);
+        }
+
+        [Test]
+        public void Get_the_ImportingData_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSONNoExtras);
+            Assert.NotNull(dummyCar.ImportingData);
         }
     }
 }
