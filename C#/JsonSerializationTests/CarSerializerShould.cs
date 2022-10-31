@@ -2,6 +2,7 @@ using NUnit.Framework;
 using JsonSerialization;
 using JsonSerialization.Model;
 using JsonSerializationTests.DataSamples;
+using System;
 
 namespace JsonSerializationTests {
     public class CarSerializerShould {
@@ -12,11 +13,25 @@ namespace JsonSerializationTests {
         private CarSerializer serializer;
         private Car dummyCar;
         private ImportingData dummyImportingData;
+        private FactoryData dummyFactoryData;
 
         [SetUp]
         public void Setup() {
             serializer = new CarSerializer();
-            dummyImportingData = new ImportingData("anImportingID", "anOrigin", "aDestination", "aProvider");
+            dummyImportingData = new ImportingData(
+                "anImportingID", 
+                "anOrigin", 
+                "aDestination", 
+                "aProvider");
+            dummyFactoryData = new FactoryData(
+                "aFactoryID",
+                "aFactoryOwner",
+                "FactoryCountry",
+                "aFactoryCountryState",
+                1,
+                new DateTime(1900 - 01 - 01),
+                new DateTime(1900 - 01 - 02)
+                );
         }
 
         [Test]
@@ -66,6 +81,12 @@ namespace JsonSerializationTests {
         public void Get_all_the_importing_data_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual(dummyImportingData, dummyCar.ImportingData);
+        }
+
+        [Test]
+        public void Get_all_the_factory_data_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual(dummyFactoryData, dummyCar.FactoryData);
         }
     }
 }

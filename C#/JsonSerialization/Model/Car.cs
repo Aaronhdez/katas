@@ -9,5 +9,6 @@ namespace JsonSerialization.Model {
         public string Model { get; set; }
         public List<Extra> Extras { get; set; }
         public ImportingData ImportingData { get; set; }
+        public FactoryData FactoryData { get; set; }
     }
 }
