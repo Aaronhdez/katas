@@ -4,15 +4,11 @@ using JsonSerialization.Model;
 
 namespace JsonSerializationTests {
     public class CarSerializerShould {
+
         private CarSerializer serializer;
-        private string carAsJSON;
-        private string carAsJSONNoExtras;
         private Car dummyCar;
 
-        [SetUp]
-        public void Setup() {
-            serializer = new CarSerializer();
-            carAsJSON = @"{""Name"":""aCarName"",
+        private const string carAsJSON = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
                             ""Model"":""aCarModel"",
                             ""Extras"": [
@@ -20,17 +16,21 @@ namespace JsonSerializationTests {
                                 { ""Name"":""USBPort"" }
                             ]
                         }";
-            carAsJSONNoExtras = @"{""Name"":""aCarName"",
+        private const string carAsJSONNoExtras = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
                             ""Model"":""aCarModel"",
                             ""Extras"": []
                         }";
+
+        [SetUp]
+        public void Setup() {
+            serializer = new CarSerializer();
         }
 
         [Test]
         public void Get_null_when_empty_JSON_is_passed() {
-            carAsJSON = @"{}";
-            dummyCar = serializer.Deserialize(carAsJSON);
+            string emptyCar = @"{}";
+            dummyCar = serializer.Deserialize(emptyCar);
             Assert.AreEqual(null, dummyCar);
         }
 
