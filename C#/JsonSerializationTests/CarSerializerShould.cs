@@ -32,7 +32,11 @@ namespace JsonSerializationTests {
                 "1",
                 new DateTime(1900,01,01),
                 new DateTime(1900,01,02));
-            dummyChassisData = new ChassisData();
+            dummyChassisData = new ChassisData(
+                "aChassisID",
+                "aProducerID",
+                "aFactoryID",
+                "aFactoryOwner");
         }
 
         [Test]
