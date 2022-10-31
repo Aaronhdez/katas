@@ -45,7 +45,7 @@ namespace JsonSerializationTests {
                 "aFactoryID",
                 "aFactoryOwner");
             dummyEngineData = new EngineData(
-                "aEngineDataID",
+                "aEngineID",
                 "aProducerID",
                 "aFactoryID",
                 "aFactoryOwner");

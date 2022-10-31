@@ -14,6 +14,7 @@ namespace JsonSerialization.Model {
         public TechnicalData TechnicalData { get; set; }
         public ChassisData ChassisData { get => TechnicalData.ChassisData; set => TechnicalData.ChassisData = value; }
         public BodyworkData BodyworkData { get => TechnicalData.BodyworkData; set => TechnicalData.BodyworkData = value; }
+        public EngineData EngineData { get => TechnicalData.EngineData; set => TechnicalData.EngineData = value; }
 
     }
 }

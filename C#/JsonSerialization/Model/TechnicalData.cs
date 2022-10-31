@@ -2,6 +2,7 @@
     public class TechnicalData {
         public ChassisData ChassisData { get; set; }
         public BodyworkData BodyworkData { get; set; }
+        public EngineData EngineData { get; set; }
     }
 
     public class ChassisData {
@@ -52,6 +53,35 @@
         public override bool Equals(object obj) {
             return obj is BodyworkData data &&
                    BodyworkID == data.BodyworkID &&
+                   ProducerID == data.ProducerID &&
+                   FactoryID == data.FactoryID &&
+                   FactoryOwner == data.FactoryOwner;
+        }
+
+        public override int GetHashCode() {
+            return base.GetHashCode();
+        }
+    }
+
+    public class EngineData {
+        public string EngineID { get; set; }
+        public string ProducerID { get; set; }
+        public string FactoryID { get; set; }
+        public string FactoryOwner { get; set; }
+
+        public EngineData() {
+        }
+
+        public EngineData(string chassisID, string producerID, string factoryID, string factoryOwner) {
+            EngineID = chassisID;
+            ProducerID = producerID;
+            FactoryID = factoryID;
+            FactoryOwner = factoryOwner;
+        }
+
+        public override bool Equals(object obj) {
+            return obj is EngineData data &&
+                   EngineID == data.EngineID &&
                    ProducerID == data.ProducerID &&
                    FactoryID == data.FactoryID &&
                    FactoryOwner == data.FactoryOwner;
