@@ -26,5 +26,13 @@ namespace JsonSerializationTests {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual("aCarName", dummyCar.Name);
         }
+
+        [Test]
+        public void Get_the_id_of_a_car_when_JSON_is_passed() {
+            carAsJSON = @"{""Name"":""aCarName"",
+                            ""Id"":""aCarId""}";
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual("aCarName", dummyCar.Id);
+        }
     }
 }

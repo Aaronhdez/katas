@@ -11,3 +11,4 @@ D:\Proyectos\Katas\C#\JsonSerialization\bin\Debug\netcoreapp3.1\JsonSerializatio
 D:\Proyectos\Katas\C#\JsonSerialization\obj\Debug\netcoreapp3.1\JsonSerialization.dll
 D:\Proyectos\Katas\C#\JsonSerialization\obj\Debug\netcoreapp3.1\JsonSerialization.pdb
 D:\Proyectos\Katas\C#\JsonSerialization\obj\Debug\netcoreapp3.1\JsonSerialization.genruntimeconfig.cache
+D:\Proyectos\Katas\C#\JsonSerialization\obj\Debug\netcoreapp3.1\JsonSerialization.csproj.AssemblyReference.cache

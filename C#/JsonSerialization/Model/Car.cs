@@ -5,5 +5,6 @@ using System.Text;
 namespace JsonSerialization.Model {
     public class Car {
         public string Name { get; set; }
+        public double Id { get; set; }
     }
 }
