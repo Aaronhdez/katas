@@ -16,7 +16,6 @@ namespace JsonSerializationTests {
         private readonly EngineData dummyEngineData = CarSamples.dummyEngineData;
 
         private CarSerializer serializer;
-        private Car dummyCar;
 
         [SetUp]
         public void Setup() {
@@ -28,6 +27,20 @@ namespace JsonSerializationTests {
             Car dummyCar = (Car) serializer.DeserializeToType(carAsJSON, typeof(Car));
             Assert.AreEqual(dummyImportingData, dummyCar.ImportingData);
             Assert.AreEqual(dummyFactoryData, dummyCar.FactoryData);
+            Assert.AreEqual(dummyChassisData, dummyCar.ChassisData);
+            Assert.AreEqual(dummyBodyworkData, dummyCar.BodyworkData);
+            Assert.AreEqual(dummyEngineData, dummyCar.EngineData);
+        }
+
+        [Test]
+        public void Deserialize_to_car_importing_type_when_specified() {
+            CarImporting dummyCar = (CarImporting)serializer.DeserializeToType(carAsJSON, typeof(CarImporting));
+            Assert.AreEqual(dummyImportingData, dummyCar.ImportingData);
+        }
+
+        [Test]
+        public void Deserialize_to_car_technical_type_when_specified() {
+            CarTechnical dummyCar = (CarTechnical)serializer.DeserializeToType(carAsJSON, typeof(CarTechnical));
             Assert.AreEqual(dummyChassisData, dummyCar.ChassisData);
             Assert.AreEqual(dummyBodyworkData, dummyCar.BodyworkData);
             Assert.AreEqual(dummyEngineData, dummyCar.EngineData);

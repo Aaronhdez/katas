@@ -1,5 +1,4 @@
-﻿using JsonSerialization.Model;
-using System;
+﻿using System;
 using System.Text.Json;
 
 namespace JsonSerialization.Model.Controllers {
