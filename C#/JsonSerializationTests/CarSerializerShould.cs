@@ -32,7 +32,7 @@ namespace JsonSerializationTests {
             carAsJSON = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId""}";
             dummyCar = serializer.Deserialize(carAsJSON);
-            Assert.AreEqual("aCarName", dummyCar.Id);
+            Assert.AreEqual("aCarId", dummyCar.Id);
         }
     }
 }
