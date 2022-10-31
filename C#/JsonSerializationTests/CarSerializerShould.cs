@@ -13,7 +13,12 @@ namespace JsonSerializationTests {
             serializer = new CarSerializer();
             carAsJSON = @"{""Name"":""aCarName"",
                             ""Id"":""aCarId"",
-                            ""Model"":""aCarModel""}";
+                            ""Model"":""aCarModel"",
+                            ""Extras"": [
+                                { ""Name"":""RadioCD"" },
+                                { ""Name"":""USBPort"" }
+                            ]
+                        }";
         }
 
         [Test]
@@ -39,6 +44,12 @@ namespace JsonSerializationTests {
         public void Get_the_model_of_a_car_when_JSON_is_passed() {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual("aCarModel", dummyCar.Model);
+        }
+
+        [Test]
+        public void Get_the_extras_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual("USBPort", dummyCar.Extras[1].Name);
         }
     }
 }
