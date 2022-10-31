@@ -26,11 +26,11 @@ namespace JsonSerializationTests {
             dummyFactoryData = new FactoryData(
                 "aFactoryID",
                 "aFactoryOwner",
-                "FactoryCountry",
+                "aFactoryCountry",
                 "aFactoryCountryState",
-                1,
-                new DateTime(1900 - 01 - 01),
-                new DateTime(1900 - 01 - 02)
+                "1",
+                new DateTime(1900,01,01),
+                new DateTime(1900,01,02)
                 );
         }
 
