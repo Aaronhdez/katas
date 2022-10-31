@@ -6,6 +6,6 @@ namespace JsonSerialization.Model {
     public class Car {
         public string Name { get; set; }
         public string Id { get; set; }
-        public double Model { get; set; }
+        public string Model { get; set; }
     }
 }
