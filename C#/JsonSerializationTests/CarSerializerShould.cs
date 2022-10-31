@@ -81,5 +81,11 @@ namespace JsonSerializationTests {
             dummyCar = serializer.Deserialize(carAsJSON);
             Assert.AreEqual("aProvider", dummyCar.ImportingData.Provider);
         }
+
+        [Test]
+        public void Get_the_Origin_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual("anOrigin", dummyCar.ImportingData.Origin);
+        }
     }
 }
