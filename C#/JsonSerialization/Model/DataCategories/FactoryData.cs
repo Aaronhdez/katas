@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JsonSerialization.Model {
+namespace JsonSerialization.Model.DataCategories {
     public class FactoryData {
         public string FactoryID { get; set; }
         public string FactoryOwner { get; set; }

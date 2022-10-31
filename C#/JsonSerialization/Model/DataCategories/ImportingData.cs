@@ -1,4 +1,4 @@
-﻿namespace JsonSerialization.Model {
+﻿namespace JsonSerialization.Model.DataCategories {
     public class ImportingData {
         public string ImportingID { get; set; }
         public string Origin { get; set; }

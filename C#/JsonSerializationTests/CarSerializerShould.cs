@@ -1,8 +1,10 @@
-using NUnit.Framework;
-using JsonSerialization;
-using JsonSerialization.Model;
-using JsonSerializationTests.DataSamples;
 using System;
+using NUnit.Framework;
+using JsonSerializationTests.DataSamples;
+using JsonSerialization.Model;
+using JsonSerialization.Model.DataCategories;
+using JsonSerialization.Model.TechnicalDataFeatures;
+using JsonSerialization.Model.Controllers;
 
 namespace JsonSerializationTests {
     public class CarSerializerShould {

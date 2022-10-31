@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using JsonSerialization.Model.DataCategories;
+using JsonSerialization.Model.TechnicalDataFeatures;
 
 namespace JsonSerialization.Model {
     public class Car {
