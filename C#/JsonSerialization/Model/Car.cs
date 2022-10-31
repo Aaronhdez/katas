@@ -8,7 +8,6 @@ namespace JsonSerialization.Model {
         public string Id { get; set; }
         public string Model { get; set; }
         public List<Extra> Extras { get; set; }
-
-        public object ImportingData = null;
+        public ImportingData ImportingData { get; set; }
     }
 }

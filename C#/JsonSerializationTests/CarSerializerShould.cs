@@ -72,8 +72,14 @@ namespace JsonSerializationTests {
 
         [Test]
         public void Get_the_ImportingData_of_a_car_when_JSON_is_passed() {
-            dummyCar = serializer.Deserialize(carAsJSONNoExtras);
+            dummyCar = serializer.Deserialize(carAsJSON);
             Assert.NotNull(dummyCar.ImportingData);
+        }
+
+        [Test]
+        public void Get_the_Provider_of_a_car_when_JSON_is_passed() {
+            dummyCar = serializer.Deserialize(carAsJSON);
+            Assert.AreEqual("aProvider", dummyCar.ImportingData.Provider);
         }
     }
 }
